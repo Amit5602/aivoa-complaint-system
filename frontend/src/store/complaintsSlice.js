@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = 'https://aivoa-backend-4et2.onrender.com/api';
 
 // ── Thunks ──────────────────────────────────────────────────────────────────
 export const fetchComplaints = createAsyncThunk('complaints/fetchAll', async (filters = {}) => {
