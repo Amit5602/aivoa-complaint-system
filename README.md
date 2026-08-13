@@ -7,7 +7,7 @@
 
 ```
 Frontend (React + Redux + Vite)  ──►  Backend (FastAPI)  ──►  LangGraph AI Agent
-       Port 3000                          Port 8000              Groq gemma2-9b-it
+       Port 3000                          Port 8000              Groq llama-3.1-8b-instant
                                               │
                                         PostgreSQL DB
 ```
@@ -61,12 +61,12 @@ npm run dev
 
 | Feature | Model | Description |
 |---------|-------|-------------|
-| Field Extraction | gemma2-9b-it | Auto-parse email/PDF text into form fields |
-| Risk Classification | gemma2-9b-it | ICH Q9-based Critical/Major/Minor assessment |
-| AI Summary | gemma2-9b-it | QMS-compliant complaint summary |
+| Field Extraction | llama-3.1-8b-instant | Auto-parse email/PDF text into form fields |
+| Risk Classification | llama-3.1-8b-instant | ICH Q9-based Critical/Major/Minor assessment |
+| AI Summary | llama-3.1-8b-instant | QMS-compliant complaint summary |
 | Root Cause | llama-3.3-70b | Probable root cause analysis |
 | CAPA Recommendations | llama-3.3-70b | Actionable corrective/preventive actions |
-| Regulatory Flags | gemma2-9b-it | FDA/ICH/WHO applicability detection |
+| Regulatory Flags | llama-3.1-8b-instant | FDA/ICH/WHO applicability detection |
 | Completeness Check | Rule-based | % completeness of complaint form |
 
 ---
@@ -136,6 +136,6 @@ pharma-complaint-system/
 - **Frontend**: React 18 + Redux Toolkit + Vite + Google Inter font
 - **Backend**: Python 3.11 + FastAPI + SQLAlchemy
 - **AI Agent**: LangGraph (6-node pipeline)
-- **LLMs**: Groq `gemma2-9b-it` + `llama-3.3-70b-versatile`
+- **LLMs**: Groq `llama-3.1-8b-instant` + `llama-3.3-70b-versatile`
 - **Database**: PostgreSQL (SQLite for dev)
 - **Standards**: ICH Q9, ICH Q10, 21 CFR Part 211, Schedule M
